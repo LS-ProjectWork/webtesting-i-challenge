@@ -17,4 +17,9 @@ describe('enhancer.js', () => {
             expect(enhancer.fail({enhancement: 18, durability: 60})).toEqual({enhancement: 17, durability: 50})
         })
     })
+    describe('get method', () => {
+        it('does not modify name', () => {
+            expect(enhancer.get({name: 'Joe'})).toEqual({name: 'Joe'})
+        })
+    })
 })
