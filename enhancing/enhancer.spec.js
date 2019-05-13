@@ -13,5 +13,8 @@ describe('enhancer.js', () => {
         it('decreases durability by 10 when enhancement is at least 15', () => {
             expect(enhancer.fail({enhancement: 15, durability: 40})).toEqual({enhancement: 15, durability: 30})
         })
+        it('decreases enhancement level by 1 if over 16', () => {
+            expect(enhancer.fail({enhancement: 18, durability: 60})).toEqual({enhancement: 17, durability: 50})
+        })
     })
 })
