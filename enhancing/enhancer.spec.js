@@ -21,6 +21,8 @@ describe('enhancer.js', () => {
         it('does not modify name', () => {
             expect(enhancer.get({enhancement: 0, name: 'Joe'})).toEqual({enhancement: 0, name: 'Joe'})
         })
-        it('')
+        it('adds enhancement level to name', () => {
+            expect(enhancer.get({enhancement: 20, name: 'Darien'})).toEqual({enhancement: 20, name: '[+20] Darien'})
+        })
     })
 })
